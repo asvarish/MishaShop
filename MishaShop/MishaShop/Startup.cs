@@ -37,7 +37,7 @@ namespace MishaShop
         /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
-            var connection = Configuration.GetConnectionString("DefaultConnection");
+            var connection = Configuration["ConnectionString"];
             services.AddIdentity<IdentityUser, IdentityRole>(opt =>
             {
                 opt.Password.RequireNonAlphanumeric = false;

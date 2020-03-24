@@ -1,10 +1,17 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+
 namespace MishaShop.Controllers
 {
-    public class AboutController
+    public class AboutController : Controller
     {
         public AboutController()
         {
+        }
+
+        [HttpGet]
+        public IActionResult AboutPage()
+        {
+            return View();
         }
     }
 }

@@ -69,3 +69,4 @@
 /Users/llasapg/Desktop/MishaProject/MishaShop/MishaShop/obj/Debug/netcoreapp3.1/staticwebassets/MishaShop.StaticWebAssets.xml
 /Users/llasapg/Desktop/MishaProject/MishaShop/MishaShop/obj/Debug/netcoreapp3.1/MishaShop.dll
 /Users/llasapg/Desktop/MishaProject/MishaShop/MishaShop/obj/Debug/netcoreapp3.1/MishaShop.pdb
+/Users/llasapg/Desktop/MishaProject/MishaShop/MishaShop/obj/Debug/netcoreapp3.1/MishaShop.csprojAssemblyReference.cache
