@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    @RenderSectionAsync("CssFile", true);
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    @RenderSectionAsync("Scripts", false);
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" asp-controller="HomePage" asp-action="Index">MishaShop</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Home<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" asp-controller="About" asp-action="">About</a>
+                <a class="nav-item nav-link" href="#">Cataloge</a>
+                <a class="nav-item nav-link" href="#">Contact-Us</a>
+                <a class="nav-item nav-link" href="#">Registration</a>
+                <a class="nav-item nav-link" href="#">Login</a>
+            </div>
+        </div>
+        <form action="/logout" method="post">
+            <input type="hidden" name="_csrf" value="${_csrf.token}" />
+            <button class="btn" type="submit">Выйти</button>
+        </form>
+        <!-- Registration / Login ( anchor )   -->
+        <!-- MishaShop About Cataloge Contact-Us       Registration Login -->
+    </nav>
+    @RenderBody();
+</body>
+</html>
