@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Views\" />
     <Folder Include="Models\" />
     <Folder Include="Views\HomePage\" />
     <Folder Include="Views\Shared\" />

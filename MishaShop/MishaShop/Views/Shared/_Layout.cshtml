@@ -22,14 +22,19 @@
             <div class="navbar-nav">
                 <a class="nav-item nav-link" asp-controller="HomePage" asp-action="Index">Каталог</a>
                 <a class="nav-item nav-link" asp-controller="About" asp-action="AboutPage">О нас</a>
-                <a class="nav-item nav-link" asp-controller="HomePage" asp-action="Index">Добавить товар</a>
-            </div>
+                @{
+                    if (signInManager.IsSignedIn(User))
+                    {
+                        <a class="nav-item nav-link" asp-controller="AddProduct" asp-action="AddProductPage">Добавить товар</a>
+                        }
+                    }
+           </div>
         </div>
         @{
             if (signInManager.IsSignedIn(User))
             {
                 <a class="nav-item nav-link" asp-controller="HomePage" asp-action="Index">@User.Identity.Name</a>
-                <a class="nav-item nav-link" asp-controller="Account" asp-action="Logout">Log-out</a>
+                <a class="nav-item nav-link" asp-controller="Account" asp-action="Logout">выход</a>
             }
             else
             {
