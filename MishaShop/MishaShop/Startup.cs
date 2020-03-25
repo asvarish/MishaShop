@@ -70,6 +70,7 @@ namespace MishaShop
                     pattern: "{Controller}/{Action}",
                     defaults: new { Controller = "HomePage", Action = "Index" });
             });
+
         }
     }
 }
