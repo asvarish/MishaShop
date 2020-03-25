@@ -1,25 +1,18 @@
 ﻿<Properties StartupConfiguration="{C9FA76E3-584A-4864-8037-CF0A0A6C479F}|Default">
   <MonoDevelop.Ide.ItemProperties.MishaShop PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MishaShop/Migrations/20200324220525_FirstMigration.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MishaShop/Startup.cs">
     <Files>
-      <File FileName="MishaShop/Startup.cs" Line="58" Column="37" />
-      <File FileName="MishaShop/Controllers/HomePageController.cs" />
-      <File FileName="MishaShop/Views/HomePage/Index.cshtml" />
-      <File FileName="MishaShop/Controllers/PricingController.cs" />
-      <File FileName="MishaShop/Views/Shared/_Layout.cshtml" />
-      <File FileName="MishaShop/Views/_ViewImports.cshtml" />
-      <File FileName="MishaShop/Views/_ViewStart.cshtml" />
-      <File FileName="MishaShop/Program.cs" />
-      <File FileName="MishaShop/appsettings.json" Line="10" Column="20" />
-      <File FileName="MishaShop/Controllers/AccountController.cs" />
-      <File FileName="MishaShop/Models/CustomerContext.cs" />
-      <File FileName="MishaShop/Views/About/AboutPage.cshtml" />
-      <File FileName="MishaShop/Views/Confirmation/ConfirmationPage.cshtml" />
-      <File FileName="MishaShop/Views/Cataloge/Cataloge.cshtml" />
-      <File FileName="MishaShop/Views/Account/Login.cshtml" />
-      <File FileName="MishaShop/Views/Registration/Registration.cshtml" />
-      <File FileName="MishaShop/Controllers/AboutController.cs" />
-      <File FileName="MishaShop/Migrations/20200324220525_FirstMigration.cs" Line="1" Column="1" />
+      <File FileName="MishaShop/Controllers/PricingController.cs" Line="1" Column="1" />
+      <File FileName="MishaShop/Controllers/RegistrationController.cs" Line="51" Column="55" />
+      <File FileName="MishaShop/Views/Shared/_Layout.cshtml" Line="29" Column="46" />
+      <File FileName="MishaShop/Controllers/AccountController.cs" Line="41" Column="18" />
+      <File FileName="MishaShop/Views/Account/Login.cshtml" Line="23" Column="15" />
+      <File FileName="MishaShop/Models/LoginModel.cs" Line="7" Column="42" />
+      <File FileName="MishaShop/Models/CustomerModel.cs" Line="16" Column="45" />
+      <File FileName="MishaShop/Views/Registration/Registration.cshtml" Line="12" Column="2" />
+      <File FileName="MishaShop/Views/Confirmation/ConfirmationPage.cshtml" Line="1" Column="1" />
+      <File FileName="MishaShop/Views/HomePage/Index.cshtml" Line="1" Column="1" />
+      <File FileName="MishaShop/Startup.cs" Line="65" Column="20" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -31,9 +24,7 @@
                 <Node name="PackageDependencies" expanded="True" />
               </Node>
               <Node name="Controllers" expanded="True" />
-              <Node name="Migrations" expanded="True">
-                <Node name="20200324220525_FirstMigration.cs" selected="True" />
-              </Node>
+              <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="About" expanded="True" />
@@ -45,6 +36,7 @@
                 <Node name="Shared" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True" />
+              <Node name="Startup.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -54,7 +46,10 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/llasapg/Desktop/Misha/MishaShop/MishaShop/MishaShop/Controllers/RegistrationController.cs" relfile="MishaShop/Controllers/RegistrationController.cs" line="51" column="1" />
+      <Breakpoint file="/Users/llasapg/Desktop/Misha/MishaShop/MishaShop/MishaShop/Controllers/AccountController.cs" relfile="MishaShop/Controllers/AccountController.cs" line="31" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

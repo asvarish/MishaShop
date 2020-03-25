@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MishaShop.Models;
 
@@ -26,18 +27,20 @@ namespace MishaShop.Controllers
         /// <param name="customer"></param>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult Login(LoginModel customer)
+        public async Task<IActionResult> Login(LoginModel customer)
         {
             if(ModelState.IsValid)
             {
-                var localUser = UserManager.FindByEmailAsync(customer.EmailAddress);
+                var localUser = await UserManager.FindByEmailAsync(customer.EmailAddress);
 
                 if(localUser != null)
                 {
-                    //var passwordCheckResponse = SignInManager.PasswordSignInAsync(localUser, customer.Password, false, true);
+                    var passwordCheckResponse = await SignInManager.PasswordSignInAsync(customer.EmailAddress, customer.Password, false, true);
+
+                    return RedirectToAction("Index", "HomePage");
                 }
 
-                return Redirect(Url.Action("HomePage", "Index"));
+                return View();
             }
 
             return View();

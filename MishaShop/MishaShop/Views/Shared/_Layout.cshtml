@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@inject SignInManager<IdentityUser> signInManager;
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -24,12 +25,18 @@
                 <a class="nav-item nav-link" asp-controller="HomePage" asp-action="Index">Добавить товар</a>
             </div>
         </div>
-        <form action="/logout" method="post">
-            <input type="hidden" name="_csrf" value="${_csrf.token}" />
-            <button class="btn" type="submit">Выйти</button>
-        </form>
-        <a class="nav-item nav-link" asp-controller="Account" asp-action="Account">Вход</a>
-        <a class="nav-item nav-link" asp-controller="Registration" asp-action="Registration">Регистрация</a>
+        @{
+            if (signInManager.IsSignedIn(User))
+            {
+                <a class="nav-item nav-link" asp-controller="HomePage" asp-action="Index">@User.Identity.Name</a>
+                <a class="nav-item nav-link" asp-controller="Account" asp-action="Logout">Log-out</a>
+            }
+            else
+            {
+                <a class="nav-item nav-link" asp-controller="Account" asp-action="Login">Вход</a>
+                <a class="nav-item nav-link" asp-controller="Registration" asp-action="Register">Регистрация</a>
+            }
+        }
         <!-- Registration / Login ( anchor )   -->
         <!-- MishaShop About Cataloge Contact-Us       Registration Login -->
     </nav>

@@ -1,12 +1,12 @@
-﻿namespace MishaShop.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace MishaShop.Models
 {
     public class LoginModel
     {
+        [DataType(DataType.EmailAddress)]
         public string EmailAddress { get; set; }
-        public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        [DataType(DataType.Password)]
         public string Password { get; set; }
-        public int Age { get; set; }
     }
 }

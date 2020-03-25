@@ -62,6 +62,8 @@ namespace MishaShop
 
             app.UseRouting();
 
+            app.UseAuthentication();
+
             app.UseEndpoints(endpoints =>
             {
                 // default route in MishaShop application
