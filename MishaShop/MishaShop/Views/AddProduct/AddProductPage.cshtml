@@ -1,4 +1,4 @@
-﻿@model LoginModel
+﻿@model Good
 @{
     ViewData["Title"] = "Add";
 }
@@ -23,13 +23,23 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Добавьте информацию о предмете</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea asp-for="Description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <span asp-validation-for="Description" />
+                    </div>
+                    <label for="exampleFormControlSelect1">Выберите размер одежды</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>нет</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                    <div>
+                        <input asp-for="Price" class="form-control form-control-sm" type="text" placeholder="стоимость">
+                        <span asp-validation-for="Price" />
                     </div>
                     <div>
-                        <input class="form-control form-control-sm" type="text" placeholder="стоимость">
-                    </div>
-                    <div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary" asp-action="AddNewProduct" asp-controller="AddProduct">Submit</button>
                     </div>
                 </form>
             </div>

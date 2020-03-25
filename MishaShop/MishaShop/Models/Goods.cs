@@ -3,7 +3,7 @@
 namespace MishaShop.Models
 {
     public class Good
-    {
+    {  
         public string CustomerId { get; set; }
         [Key]
         public string FileId { get; set; }

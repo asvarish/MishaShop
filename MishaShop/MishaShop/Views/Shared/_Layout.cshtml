@@ -20,7 +20,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" asp-controller="HomePage" asp-action="Index">Каталог</a>
+                <a class="nav-item nav-link" asp-controller="Catalog" asp-action="CatalogPage">Каталог</a>
                 <a class="nav-item nav-link" asp-controller="About" asp-action="AboutPage">О нас</a>
                 @{
                     if (signInManager.IsSignedIn(User))

@@ -55,7 +55,7 @@ namespace MishaShop.Controllers
                     }
                     else
                     {
-                        ModelState.AddModelError("", "Poshel nahui, u teba uzhe est accout");
+                        ModelState.AddModelError("", "У вас уже есть аккаунт!");
 
                         return View("Registration");
                     }

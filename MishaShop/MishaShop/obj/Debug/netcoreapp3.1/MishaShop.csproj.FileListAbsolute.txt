@@ -352,7 +352,6 @@ C:\Users\asvar\OneDrive\Документы\GitHub\MishaShop\MishaShop\MishaShop\
 C:\Users\asvar\OneDrive\Документы\GitHub\MishaShop\MishaShop\MishaShop\obj\Debug\netcoreapp3.1\MishaShop.RazorCoreGenerate.cache
 C:\Users\asvar\OneDrive\Документы\GitHub\MishaShop\MishaShop\MishaShop\obj\Debug\netcoreapp3.1\Razor\Views\About\AboutPage.cshtml.g.cs
 C:\Users\asvar\OneDrive\Документы\GitHub\MishaShop\MishaShop\MishaShop\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
-C:\Users\asvar\OneDrive\Документы\GitHub\MishaShop\MishaShop\MishaShop\obj\Debug\netcoreapp3.1\Razor\Views\Cataloge\Cataloge.cshtml.g.cs
 C:\Users\asvar\OneDrive\Документы\GitHub\MishaShop\MishaShop\MishaShop\obj\Debug\netcoreapp3.1\Razor\Views\Confirmation\ConfirmationPage.cshtml.g.cs
 C:\Users\asvar\OneDrive\Документы\GitHub\MishaShop\MishaShop\MishaShop\obj\Debug\netcoreapp3.1\Razor\Views\HomePage\Index.cshtml.g.cs
 C:\Users\asvar\OneDrive\Документы\GitHub\MishaShop\MishaShop\MishaShop\obj\Debug\netcoreapp3.1\Razor\Views\Registration\Registration.cshtml.g.cs
@@ -366,3 +365,5 @@ C:\Users\asvar\OneDrive\Документы\GitHub\MishaShop\MishaShop\MishaShop\
 C:\Users\asvar\OneDrive\Документы\GitHub\MishaShop\MishaShop\MishaShop\obj\Debug\netcoreapp3.1\MishaShop.dll
 C:\Users\asvar\OneDrive\Документы\GitHub\MishaShop\MishaShop\MishaShop\obj\Debug\netcoreapp3.1\MishaShop.pdb
 C:\Users\asvar\OneDrive\Документы\GitHub\MishaShop\MishaShop\MishaShop\obj\Debug\netcoreapp3.1\Razor\Views\AddProduct\AddProductPage.cshtml.g.cs
+C:\Users\asvar\OneDrive\Документы\GitHub\MishaShop\MishaShop\MishaShop\obj\Debug\netcoreapp3.1\MishaShop.csprojAssemblyReference.cache
+C:\Users\asvar\OneDrive\Документы\GitHub\MishaShop\MishaShop\MishaShop\obj\Debug\netcoreapp3.1\Razor\Views\Catalog\CatalogPage.cshtml.g.cs
