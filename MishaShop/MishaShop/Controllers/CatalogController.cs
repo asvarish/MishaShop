@@ -21,7 +21,7 @@ namespace MishaShop.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> CatalogPage()
+        public IActionResult CatalogPage()
         {
             var customerData = CustomerContext.Users.ToList();
 
@@ -39,7 +39,7 @@ namespace MishaShop.Controllers
             {
                 goodsLocal.Add(item);
 
-                var filePath = $"wwwroot/CustomerImages/{item.FileName.Replace(".","")}.jpg";
+                var filePath = $"wwwroot/Catalog/CustomerImages/{item.FileName.Replace(".","")}.jpg";
 
                 using (var file = System.IO.File.Create(filePath))
                 {

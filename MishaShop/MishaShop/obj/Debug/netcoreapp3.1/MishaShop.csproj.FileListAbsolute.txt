@@ -366,3 +366,4 @@ C:\Users\asvar\OneDrive\Документы\GitHub\MishaShop\MishaShop\MishaShop\
 C:\Users\asvar\OneDrive\Документы\GitHub\MishaShop\MishaShop\MishaShop\obj\Debug\netcoreapp3.1\MishaShop.csproj.CopyComplete
 C:\Users\asvar\OneDrive\Документы\GitHub\MishaShop\MishaShop\MishaShop\obj\Debug\netcoreapp3.1\MishaShop.dll
 C:\Users\asvar\OneDrive\Документы\GitHub\MishaShop\MishaShop\MishaShop\obj\Debug\netcoreapp3.1\MishaShop.pdb
+C:\Users\asvar\OneDrive\Документы\GitHub\MishaShop\MishaShop\MishaShop\obj\Debug\netcoreapp3.1\MishaShop.csprojAssemblyReference.cache
