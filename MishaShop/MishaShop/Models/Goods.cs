@@ -13,5 +13,7 @@ namespace MishaShop.Models
         [Required]
         public string Description { get; set; }
         public string FileName { get; set; }
+        public byte[] File { get; set; }
+        public string Size { get; set; }
     }
 }

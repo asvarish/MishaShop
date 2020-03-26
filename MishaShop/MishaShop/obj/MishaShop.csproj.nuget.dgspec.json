@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\asvar\\OneDrive\\Документы\\GitHub\\MishaShop\\MishaShop\\MishaShop\\MishaShop.csproj": {}
+    "/Users/llasapg/Desktop/Misha/MishaShop/MishaShop/MishaShop/MishaShop.csproj": {}
   },
   "projects": {
-    "C:\\Users\\asvar\\OneDrive\\Документы\\GitHub\\MishaShop\\MishaShop\\MishaShop\\MishaShop.csproj": {
+    "/Users/llasapg/Desktop/Misha/MishaShop/MishaShop/MishaShop/MishaShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asvar\\OneDrive\\Документы\\GitHub\\MishaShop\\MishaShop\\MishaShop\\MishaShop.csproj",
+        "projectUniqueName": "/Users/llasapg/Desktop/Misha/MishaShop/MishaShop/MishaShop/MishaShop.csproj",
         "projectName": "MishaShop",
-        "projectPath": "C:\\Users\\asvar\\OneDrive\\Документы\\GitHub\\MishaShop\\MishaShop\\MishaShop\\MishaShop.csproj",
-        "packagesPath": "C:\\Users\\asvar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asvar\\OneDrive\\Документы\\GitHub\\MishaShop\\MishaShop\\MishaShop\\obj\\",
+        "projectPath": "/Users/llasapg/Desktop/Misha/MishaShop/MishaShop/MishaShop/MishaShop.csproj",
+        "packagesPath": "/Users/llasapg/.nuget/packages/",
+        "outputPath": "/Users/llasapg/Desktop/Misha/MishaShop/MishaShop/MishaShop/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\asvar\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/llasapg/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -89,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
         }
       }
     }

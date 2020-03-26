@@ -1,42 +1,53 @@
 ﻿<Properties StartupConfiguration="{C9FA76E3-584A-4864-8037-CF0A0A6C479F}|Default">
   <MonoDevelop.Ide.ItemProperties.MishaShop PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MishaShop/Startup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MishaShop/Views/HomePage/Index.cshtml">
     <Files>
-      <File FileName="MishaShop/Controllers/PricingController.cs" Line="1" Column="1" />
-      <File FileName="MishaShop/Controllers/RegistrationController.cs" Line="51" Column="55" />
-      <File FileName="MishaShop/Views/Shared/_Layout.cshtml" Line="29" Column="46" />
-      <File FileName="MishaShop/Controllers/AccountController.cs" Line="41" Column="18" />
-      <File FileName="MishaShop/Views/Account/Login.cshtml" Line="23" Column="15" />
-      <File FileName="MishaShop/Models/LoginModel.cs" Line="7" Column="42" />
-      <File FileName="MishaShop/Models/CustomerModel.cs" Line="16" Column="45" />
-      <File FileName="MishaShop/Views/Registration/Registration.cshtml" Line="12" Column="2" />
+      <File FileName="MishaShop/Migrations/20200325163018_AddedNewTable.cs" Line="1" Column="1" />
+      <File FileName="MishaShop/Views/AddProduct/AddProductPage.cshtml" Line="30" Column="76" />
+      <File FileName="MishaShop/Models/Goods.cs" Line="17" Column="41" />
+      <File FileName="MishaShop/Controllers/AddProductController.cs" Line="57" Column="51" />
+      <File FileName="MishaShop/Models/CustomerContext.cs" Line="7" Column="33" />
+      <File FileName="MishaShop/Models/FileViewModels.cs" Line="41" Column="37" />
+      <File FileName="MishaShop/Models/LoginModel.cs" Line="1" Column="1" />
+      <File FileName="MishaShop/Controllers/CatalogController.cs" Line="33" Column="36" />
+      <File FileName="MishaShop/Migrations/20200326132119_addedFileUpload.cs" Line="18" Column="41" />
+      <File FileName="MishaShop/Views/Shared/_Layout.cshtml" Line="10" Column="38" />
+      <File FileName="MishaShop/Migrations/CustomerContextModelSnapshot.cs" Line="297" Column="1" />
+      <File FileName="MishaShop/Views/Catalog/CatalogPage.cshtml" Line="35" Column="36" />
+      <File FileName="MishaShop/Models/CatalogeModel.cs" Line="8" Column="23" />
+      <File FileName="MishaShop/Models/CustomerModel.cs" Line="1" Column="1" />
+      <File FileName="MishaShop/Controllers/AccountController.cs" Line="1" Column="1" />
       <File FileName="MishaShop/Views/Confirmation/ConfirmationPage.cshtml" Line="1" Column="1" />
-      <File FileName="MishaShop/Views/HomePage/Index.cshtml" Line="1" Column="1" />
-      <File FileName="MishaShop/Startup.cs" Line="65" Column="20" />
+      <File FileName="MishaShop/Startup.cs" Line="43" Column="61" />
+      <File FileName="MishaShop/Views/_ViewStart.cshtml" Line="3" Column="2" />
+      <File FileName="MishaShop/Views/_ViewImports.cshtml" Line="3" Column="21" />
+      <File FileName="MishaShop/Migrations/20200326161046_AddedNewFild.cs" Line="1" Column="1" />
+      <File FileName="MishaShop/Views/HomePage/Index.cshtml" Line="7" Column="19" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MishaShop" expanded="True">
             <Node name="MishaShop" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="FrameworkReferences" expanded="True" />
-                <Node name="PackageDependencies" expanded="True" />
-              </Node>
+              <Node name="Dependencies" expanded="True" />
               <Node name="Controllers" expanded="True" />
               <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="About" expanded="True" />
                 <Node name="Account" expanded="True" />
-                <Node name="Cataloge" expanded="True" />
+                <Node name="AddProduct" expanded="True" />
+                <Node name="Catalog" expanded="True" />
                 <Node name="Confirmation" expanded="True" />
-                <Node name="HomePage" expanded="True" />
+                <Node name="HomePage" expanded="True">
+                  <Node name="Index.cshtml" selected="True" />
+                </Node>
                 <Node name="Registration" expanded="True" />
                 <Node name="Shared" expanded="True" />
               </Node>
-              <Node name="wwwroot" expanded="True" />
-              <Node name="Startup.cs" selected="True" />
+              <Node name="wwwroot" expanded="True">
+                <Node name="CustomerImages" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -48,7 +59,9 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/llasapg/Desktop/Misha/MishaShop/MishaShop/MishaShop/Controllers/RegistrationController.cs" relfile="MishaShop/Controllers/RegistrationController.cs" line="51" column="1" />
-      <Breakpoint file="/Users/llasapg/Desktop/Misha/MishaShop/MishaShop/MishaShop/Controllers/AccountController.cs" relfile="MishaShop/Controllers/AccountController.cs" line="31" column="1" />
+      <Breakpoint file="/Users/llasapg/Desktop/Misha/MishaShop/MishaShop/MishaShop/Views/Catalog/m9h8n20m.96i~" relfile="MishaShop/Views/Catalog/m9h8n20m.96i~" line="55" column="1" />
+      <Breakpoint file="/Users/llasapg/Desktop/Misha/MishaShop/MishaShop/MishaShop/Views/Catalog/m9h8n20m.96i~" relfile="MishaShop/Views/Catalog/m9h8n20m.96i~" line="57" column="1" />
+      <Breakpoint file="/Users/llasapg/Desktop/Misha/MishaShop/MishaShop/MishaShop/Controllers/bgr9qa3h.g8w~" relfile="MishaShop/Controllers/bgr9qa3h.g8w~" line="4" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

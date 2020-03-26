@@ -15,6 +15,7 @@
     <Folder Include="Views\Registration\" />
     <Folder Include="Views\Confirmation\" />
     <Folder Include="Views\Account\" />
+    <Folder Include="wwwroot\CustomerImages\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
