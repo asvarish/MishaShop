@@ -15,28 +15,28 @@ namespace MishaShop.Models
         public List<SelectListItem> Sizes { get; set; } = new List<SelectListItem> {
             new SelectListItem
             {
-                Text ="Misha Sosi Hui",
-                Value="Misha huilo"
+                Text ="Нет",
+                Value="Нет"
             },
              new SelectListItem
             {
-                Text ="Misha Sosi Hui",
-                Value="Misha huilo"
+                Text ="S",
+                Value="S"
             },
         new SelectListItem
             {
-                Text ="Misha Sosi Hui",
-                Value="Misha huilo"
+                Text ="M",
+                Value="M"
             },
         new SelectListItem
             {
-                Text ="Misha Sosi Hui",
-                Value="Misha huilo"
+                Text ="L",
+                Value="L"
             },
         new SelectListItem
             {
-                Text ="Misha Sosi Hui",
-                Value="Misha huilo"
+                Text ="XL",
+                Value="XL"
             }};
         public string CustomerChoise { get; set; }
     }

@@ -13,7 +13,6 @@
     <Folder Include="wwwroot\css\" />
     <Folder Include="wwwroot\img\" />
     <Folder Include="Views\Registration\" />
-    <Folder Include="Views\Confirmation\" />
     <Folder Include="Views\Account\" />
     <Folder Include="wwwroot\CustomerImages\" />
   </ItemGroup>
