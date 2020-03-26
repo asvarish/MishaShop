@@ -23,8 +23,9 @@
                     if (signInManager.IsSignedIn(User))
                     {
                         <a class="nav-item nav-link" asp-controller="AddProduct" asp-action="AddProductPage">Добавить товар</a>
-                        }
+                        <a class="nav-item nav-link" asp-controller="FavouriteController" asp-action=>Избранное</a>
                     }
+                }
            </div>
         </div>
         @{
