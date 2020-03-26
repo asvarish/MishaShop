@@ -11,7 +11,11 @@ namespace MishaShop.Models
 
         public CustomerContext(DbContextOptions<CustomerContext> options) : base(options)
         {
-            Database.Migrate();
+            Database.EnsureCreated();
+        }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlite("Data Source=URA.db");
         }
     }
 }

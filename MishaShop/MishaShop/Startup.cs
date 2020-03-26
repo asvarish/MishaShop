@@ -43,7 +43,7 @@ namespace MishaShop
                 opt.Password.RequireNonAlphanumeric = false;
             })
             .AddEntityFrameworkStores<CustomerContext>();
-            services.AddDbContext<CustomerContext>(options => options.UseMySql(connection));
+            services.AddDbContext<CustomerContext>();
             services.AddRazorPages();
             services.AddControllersWithViews();
         }

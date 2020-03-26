@@ -1,4 +1,5 @@
 ﻿@model CatalogeModel
+@inject SignInManager<IdentityUser> signInManager
 @{
     ViewData["Title"] = "Cataloge page";
 }
@@ -43,17 +44,16 @@
                                 <p class="card-text">@item.Size</p>
                                 <p class="card-text">@currentCustomer.UserName</p>
                                 <p class="card-text">@currentCustomer.PhoneNumber</p>
-                                @if (User != null)
+                                @if (User != null && @currentCustomer.UserName == @User.Identity.Name)
                                 {
-                                    if (@currentCustomer.UserName == @User.Identity.Name)
-                                    {
-                                        <button type="button" class="btn btn-danger" asp-controller="Delete" asp-action="Delet">Удалить</button>
-                                    }
-                                    else
-                                    {
-                                        <button type="button" class="btn btn-danger" asp-controller="Favourite" asp-action="AddToFavourite" asp-route-id="@item.FileId">Удалить</button>
-                                    }
+
+
+                                    <button type="button" class="btn btn-danger" asp-controller="Delete" asp-action="Delet">Удалить</button>
+
+
                                 }
+                                    @if (signInManager.IsSignedIn(User))
+                                    {<button type="button" class="btn btn-danger" asp-controller="Favourite" asp-action="AddToFavourite" asp-route-id="@item.FileId">Добавить в избранное</button>}
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
 
