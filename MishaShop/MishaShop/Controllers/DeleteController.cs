@@ -20,9 +20,14 @@ namespace MishaShop.Controllers
         {
             try
             {
-                 var a = _db.Goods.FirstOrDefault(x => x.FileId == id);
-                 _db.Goods.Remove(a);
-                 _db.SaveChangesAsync();
+                var a = _db.Goods.FirstOrDefault(x => x.FileId == id);
+
+                var b = _db.Favourite.FirstOrDefault(x => x.GoodId == id);
+
+
+                _db.Favourite.Remove(b);
+                _db.Goods.Remove(a);
+                _db.SaveChanges();
             }
             catch (Exception e)
             {
