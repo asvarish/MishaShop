@@ -41,11 +41,15 @@ namespace MishaShop.Controllers
                         Email = customer.Email,
                         UserName = customer.Email,
                     }, customer.Password);
-
                     if (accountResponse.Succeeded)
                     {
+                       var cust = new CustomerModel
+                        {
+                            MobilePhone = customer.MobilePhone,
+                            FirstName = customer.FirstName,
+                            LastName = customer.LastName
+                        };
                         var user = await UserManager.FindByEmailAsync(customer.Email);
-
                         await SignInManager.SignInAsync(user, true);
 
                         if (accountResponse.Succeeded)

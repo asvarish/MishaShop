@@ -25,7 +25,7 @@
                             <div class="card-body">
                                 <p class="card-text">Информация о товаре</p>
                                 <p class="card-text outline">@good.good.Description</p>
-                                <p class="card-text">@good.good.Size</p>
+                                <p class="card-text">размер:@good.good.Size</p>
                                 <p class="card-text">@good.User.UserName</p>
                                 <p class="card-text">@good.User.PhoneNumber</p>
                                 <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("DeleteFromFavourite", "Favourite", new {id = @good.id.ToString()})'">Удалить из избранного</button>

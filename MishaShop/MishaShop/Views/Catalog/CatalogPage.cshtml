@@ -41,7 +41,7 @@
                             <div class="card-body">
                                 <p class="card-text">Информация о товаре</p>
                                 <p class="card-text outline">@item.Description</p>
-                                <p class="card-text">@item.Size</p>
+                                <p class="card-text">размер:@item.Size</p>
                                 <p class="card-text">@currentCustomer.UserName</p>
                                 <p class="card-text">@currentCustomer.PhoneNumber</p>
                                 @if (User != null && @currentCustomer.UserName == @User.Identity.Name)
