@@ -4,6 +4,7 @@ namespace MishaShop.Models
 {
     public class CustomerModel
     {
+        public static object Users { get; internal set; }
         [Required]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }

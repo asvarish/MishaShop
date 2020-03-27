@@ -14,6 +14,7 @@ namespace MishaShop.Controllers
     {
         private UserManager<IdentityUser> UserManager { get; set; }
         private SignInManager<IdentityUser> SignInManager { get; set; }
+        
 
         /// <summary>
         /// Di constractor
@@ -24,6 +25,7 @@ namespace MishaShop.Controllers
         {
             UserManager = userManager;
             SignInManager = signInManager;
+            
         }
 
         [HttpPost]
@@ -40,15 +42,10 @@ namespace MishaShop.Controllers
                     {
                         Email = customer.Email,
                         UserName = customer.Email,
+                        PhoneNumber = customer.MobilePhone
                     }, customer.Password);
                     if (accountResponse.Succeeded)
-                    {
-                       var cust = new CustomerModel
-                        {
-                            MobilePhone = customer.MobilePhone,
-                            FirstName = customer.FirstName,
-                            LastName = customer.LastName
-                        };
+                    {    
                         var user = await UserManager.FindByEmailAsync(customer.Email);
                         await SignInManager.SignInAsync(user, true);
 

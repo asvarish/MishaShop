@@ -36,10 +36,14 @@ namespace MishaShop.Controllers
                 if(localUser != null)
                 {
                     var passwordCheckResponse = await SignInManager.PasswordSignInAsync(customer.EmailAddress, customer.Password, false, true);
-
-                    return RedirectToAction("Index", "HomePage");
+                    if (passwordCheckResponse.Succeeded)
+                    {
+                        return RedirectToAction("Index", "HomePage");
+                    }
+                    else
+                        return View();
                 }
-
+                
                 return View();
             }
 

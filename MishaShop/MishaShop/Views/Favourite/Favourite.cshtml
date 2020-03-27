@@ -1,5 +1,10 @@
 @model List<FavouriteGoods>
-
+    <style>
+        .outline {
+            border: 2px solid black;
+            padding: 0 10px;
+        }
+    </style>
 @{
     ViewBag.Title = "Favourite";
     Layout = "_Layout";
@@ -27,7 +32,7 @@
                                 <p class="card-text outline">@good.good.Description</p>
                                 <p class="card-text">размер:@good.good.Size</p>
                                 <p class="card-text">@good.User.UserName</p>
-                                <p class="card-text">@good.User.PhoneNumber</p>
+                                <p class="card-text">номер продавца:@good.User.PhoneNumber</p>
                                 <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("DeleteFromFavourite", "Favourite", new {id = @good.id.ToString()})'">Удалить из избранного</button>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <small class="text-muted">Цена @good.good.Price р </small>

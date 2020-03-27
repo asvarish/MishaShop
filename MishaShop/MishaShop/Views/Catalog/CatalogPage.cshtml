@@ -43,14 +43,14 @@
                                 <p class="card-text outline">@item.Description</p>
                                 <p class="card-text">размер:@item.Size</p>
                                 <p class="card-text">@currentCustomer.UserName</p>
-                                <p class="card-text">@currentCustomer.PhoneNumber</p>
+                                <p class="card-text">номер продавца:@currentCustomer.PhoneNumber</p>
                                 @if (User != null && @currentCustomer.UserName == @User.Identity.Name)
                                 {
                                     <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("Delete", "Delete", new { id = item.FileId})'">Удалить</button>
                                 }
                                     @if (signInManager.IsSignedIn(User))
                                     {
-                                        <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("AddToFavourite", "Favourite", new { id = item.FileId})'">Добавить в избранное</button>
+                                        <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("AddToFavourite", "Favourite", new { id = item.FileId})'">Добавить в избранное</button>
                                     }
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
