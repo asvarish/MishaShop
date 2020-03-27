@@ -14,18 +14,21 @@
     <form>
         <div class="form-group">
             <label for="exampleInputEmail1">Электронная почта</label>
-            <span asp-validation-for="Email"/>
+            <span asp-validation-for="Email" />
             <input asp-for="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            @Html.ValidationMessageFor(model => model.Email)
         </div>
         <div class="form-group">
             <label for="exampleInputPassword1">Пароль</label>
             <input asp-for="Password" class="form-control" id="exampleInputPassword1">
-            <span asp-validation-for="Password" />
+            <span asp-validation-for="Password" /> 
+            @Html.ValidationMessageFor(model => model.Password)
         </div>
         <div class="form-group">
             <label for="exampleInputName">Телефон в формате 8XXXXXXXXXX </label>
             <input asp-for="MobilePhone" pattern="8[0-9]{10}" class="form-control" id="exampleInputTel">
             <span asp-validation-for="MobilePhone" />
+            @Html.ValidationMessageFor(model => model.MobilePhone)
             <div class="form-group">
                 <label for="exampleInputName">Имя</label>
                 <input asp-for="FirstName" class="form-control" id="exampleInputName">
@@ -37,6 +40,6 @@
                 <span asp-validation-for="LastName" />
             </div>
         </div>
-            <button type="submit" class="btn btn-primary" asp-action="RegisterNewCustomer" asp-controller="Registration">Submit</button>
+            <button type="submit" class="btn btn-primary" asp-action="RegisterNewCustomer" asp-controller="Registration">принять</button>
     </form>
 </div>
