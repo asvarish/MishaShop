@@ -46,14 +46,12 @@
                                 <p class="card-text">@currentCustomer.PhoneNumber</p>
                                 @if (User != null && @currentCustomer.UserName == @User.Identity.Name)
                                 {
-
-
-                                    <button type="button" class="btn btn-danger" asp-controller="Delete" asp-action="Delet">Удалить</button>
-
-
+                                    <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("Delete", "Delete", new { id = item.FileId})'">Удалить</button>
                                 }
                                     @if (signInManager.IsSignedIn(User))
-                                    {<button type="button" class="btn btn-danger" asp-controller="Favourite" asp-action="AddToFavourite" asp-route-id="@item.FileId">Добавить в избранное</button>}
+                                    {
+                                        <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("AddToFavourite", "Favourite", new { id = item.FileId})'">Добавить в избранное</button>
+                                    }
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
 

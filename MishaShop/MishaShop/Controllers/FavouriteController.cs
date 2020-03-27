@@ -8,6 +8,7 @@ using MishaShop.Models;
 
 namespace MishaShop.Controllers
 {
+    [Route("[controller]/{action}")]
     public class FavouriteController : Controller
     {
         private UserManager<IdentityUser> _userManager;
@@ -23,31 +24,46 @@ namespace MishaShop.Controllers
             List<FavouriteGoods> goods = _db.Favourite
                 .Where(x => x.UserId == _userManager.FindByNameAsync(User.Identity.Name).Result.Id)
                 .Include(x => x.User)
+                .Include(x => x.good)
                 .ToList();
             
             return View(goods);
         }
+        
+        
+        [HttpGet]
         public ActionResult AddToFavourite(string id)
         {
             try
             {
-                FavouriteGoods good = (FavouriteGoods)_db.Goods.FirstOrDefault(x => x.FileId == id);
-                good.UserId = _userManager.FindByNameAsync(User.Identity.Name).Result.Id;
+                Good good = _db.Goods.FirstOrDefault(x => x.FileId == id);
+                FavouriteGoods f = new FavouriteGoods();
+                f.GoodId = good.FileId;
+                f.UserId = _userManager.FindByNameAsync(User.Identity.Name).Result.Id;
 
-                _db.Favourite.Add(good);
+                if (_db.Favourite.FirstOrDefault(x =>
+                    x.GoodId == good.FileId &&
+                    x.UserId == _userManager.FindByNameAsync(User.Identity.Name).Result.Id) != null)
+                {
+                    return RedirectToAction("Favourite");
+                }
+                
+                _db.Favourite.Add(f);
                 _db.SaveChanges();
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
             }
-            return RedirectToPage("Favourite");
+            return RedirectToAction("Favourite");
         }
-        public ActionResult DeleteFromFavourite(string id)
+        
+        [HttpGet]
+        public ActionResult DeleteFromFavourite(int id)
         {
             try
             {
-                FavouriteGoods good = (FavouriteGoods)_db.Goods.FirstOrDefault(x => x.FileId == id);
+                FavouriteGoods good = _db.Favourite.FirstOrDefault(x => x.id == id);
                 _db.Favourite.Remove(good);
 
                 _db.SaveChanges();
@@ -57,7 +73,7 @@ namespace MishaShop.Controllers
                 Console.WriteLine(e);
             }
 
-            return RedirectToPage("Favourite");
+            return RedirectToAction("Favourite");
         }
     }
 }

@@ -20,17 +20,23 @@
                     <div class="form-group">
                         <label for="exampleFormControlFile1">Вставьте фотографию</label>
                         <input asp-for="FileData" class="form-control-file" id="exampleFormControlFile1">
+                        @Html.ValidationMessageFor(model => model.FileData)
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Добавьте информацию о предмете</label>
                         <textarea asp-for="Description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         <span asp-validation-for="Description" />
+                        @Html.ValidationMessageFor(model => model.Description)
                     </div>
-                    <label for="exampleFormControlSelect1">Выберите размер одежды</label>
-                    <select asp-items="Model.Sizes" asp-for="CustomerChoise" class="form-control" id="exampleFormControlSelect1"></select>
-                    <div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Выберите размер одежды</label>
+                        <select asp-items="Model.Sizes" asp-for="CustomerChoise" class="form-control" id="exampleFormControlSelect1"></select>
+                        @Html.ValidationMessageFor(model => model.CustomerChoise)
+                    </div>
+                    <div class="form-group">
                         <input asp-for="Price" class="form-control form-control-sm" type="text" placeholder="стоимость">
                         <span asp-validation-for="Price" />
+                        @Html.ValidationMessageFor(model => model.Price)
                     </div>
                     <div>
                         <button type="submit" class="btn btn-primary">Submit</button>

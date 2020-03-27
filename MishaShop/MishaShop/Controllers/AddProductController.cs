@@ -31,7 +31,7 @@ namespace MishaShop.Controllers
         [HttpGet]
         public async Task<IActionResult> AddNewProduct(FileViewModel good)
         {
-            if(ModelState.IsValid)
+            if(ModelState.IsValid && good.Price != null && good.Description != null && good.FileData != null)
             {
                 var customer = await UserManager.FindByNameAsync(User.Identity.Name);
 

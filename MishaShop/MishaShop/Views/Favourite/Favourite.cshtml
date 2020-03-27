@@ -4,6 +4,15 @@
     ViewBag.Title = "Favourite";
     Layout = "_Layout";
 }
+@section CssFile {
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+}
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+}
 
 @foreach (var good in Model)
 {
@@ -12,18 +21,18 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="card mb-4 shadow-sm">
-                            <img class="bd-placeholder-img card-img-top" src=@($"CustomerImages/{good.FileName.Replace(".", "")}.jpg") />
+                            <img class="bd-placeholder-img card-img-top" src="@Url.Content($"~/Catalog/CustomerImages/{good.good.FileName.Replace(".", "")}.jpg")"/>
                             <div class="card-body">
                                 <p class="card-text">Информация о товаре</p>
-                                <p class="card-text outline">@good.Description</p>
-                                <p class="card-text">@good.Size</p>
+                                <p class="card-text outline">@good.good.Description</p>
+                                <p class="card-text">@good.good.Size</p>
                                 <p class="card-text">@good.User.UserName</p>
                                 <p class="card-text">@good.User.PhoneNumber</p>
-                                <button type="button" class="btn btn-danger" asp-controller="Favourite" asp-action="Delet">Удалить</button>
+                                <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("DeleteFromFavourite", "Favourite", new {id = @good.id.ToString()})'">Удалить из избранного</button>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <small class="text-muted">Цена @good.Price р </small>
+                                    <small class="text-muted">Цена @good.good.Price р </small>
                                 </div>
-                            </div>
+                            </div>    
                         </div>
                     </div>
                 </div>
