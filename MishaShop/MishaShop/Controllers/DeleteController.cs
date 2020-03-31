@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using MishaShop.Models;
 
 namespace MishaShop.Controllers
@@ -20,13 +21,15 @@ namespace MishaShop.Controllers
         {
             try
             {
-                var a = _db.Goods.FirstOrDefault(x => x.FileId == id);
-
-                var b = _db.Favourite.FirstOrDefault(x => x.GoodId == id);
-
-
-                _db.Favourite.Remove(b);
-                _db.Goods.Remove(a);
+                foreach (var order in _db.ForBuys.Where(x=> x.GoodId == id))
+                {
+                    _db.Remove(order);
+                }
+                foreach (var fav in _db.Favourite.Where(x=> x.GoodId == id))
+                {
+                    _db.Remove(fav);
+                }
+                _db.Goods.Remove(_db.Goods.FirstOrDefault(x => x.FileId == id));
                 _db.SaveChanges();
             }
             catch (Exception e)

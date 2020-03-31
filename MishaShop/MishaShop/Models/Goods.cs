@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace MishaShop.Models
 {
@@ -15,5 +16,7 @@ namespace MishaShop.Models
         public string FileName { get; set; }
         public byte[] File { get; set; }
         public string Size { get; set; }
+
+        public List<ForBuyModel> Orders { get; set; }
     }
 }

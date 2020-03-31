@@ -19,6 +19,7 @@ namespace MishaShop.Controllers
         {
             CustomerContext = customerContext;
         }
+        
         [HttpGet]
         public IActionResult CatalogPage()
         {

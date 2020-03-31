@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace MishaShop.Models
 {
-    public class ForBuy
+    public class ForBuyModel
     {
+        public int Id { get; set; }
+
+        public string GoodId { get; set; }
+        public Good Good { get; set; }
+
         public string City { get; set; }
         [Required]
         public string Street { get; set; }
@@ -19,6 +24,5 @@ namespace MishaShop.Models
         public string LastName { get; set; }
         [Required]
         public string PhoneNumber { get; set; }
-        [Required]
     }
 }

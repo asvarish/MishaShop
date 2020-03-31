@@ -2,6 +2,7 @@
 using MishaShop.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -14,36 +15,27 @@ namespace MishaShop.Controllers
         {
             _db = db;
         }
+        
         [HttpPost]
         [HttpGet]
-        public async Task<IActionResult> RegForBuy(ForBuy forBuy)
+        public IActionResult RegForBuy(ForBuyModel forBuyModel)
         {
-            if (ModelState.IsValid && forBuy.City != null && forBuy.Street != null && forBuy.House != null && forBuy.FirstName != null && forBuy.LastName != null && forBuy.PhoneNumber != null)
+            if (ModelState.IsValid && forBuyModel.City != null && forBuyModel.Street != null && forBuyModel.House != null && forBuyModel.FirstName != null && forBuyModel.LastName != null && forBuyModel.PhoneNumber != null)
             {
-                CustomerContext.ForBuys.Add(new ForBuy
-                {
-                    CustomerId = customer.Id.ToString(),
-                    Description = ForBuy.Description,
-                    FileName = Path.GetRandomFileName(),
-                    Price = ForBuy.Price,
-                    File = fileData,
-                    FileId = (files.Count + 1).ToString(),
-                    Size = ForBuy.CustomerChoise
-                });
+                _db.ForBuys.Add(forBuyModel);
+                _db.SaveChanges();
 
-                await CustomerContext.SaveChangesAsync();
-
-                return RedirectToAction("Catalog", "CatalogPage");
+                return RedirectToAction("CatalogPage", "Catalog");
             }
             else
             {
-                return View("AddProductPage");
+                return RedirectToAction("BuyPage", "Buy");
             }
         }
         [HttpGet]
-        public IActionResult BuyPage()
+        public IActionResult BuyPage(string id)
         {
-            return View();
+            return View(new ForBuyModel(){GoodId = id});
         }
     }
 }
