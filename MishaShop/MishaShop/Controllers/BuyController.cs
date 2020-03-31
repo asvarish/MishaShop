@@ -16,24 +16,11 @@ namespace MishaShop.Controllers
         }
         [HttpPost]
         [HttpGet]
-        public async Task<IActionResult> AddNewProduct(FileViewModel ForBuy)
+        public async Task<IActionResult> RegForBuy(ForBuy forBuy)
         {
-            if (ModelState.IsValid && ForBuy.Price != null && ForBuy.Description != null && ForBuy.FileData != null)
+            if (ModelState.IsValid && forBuy.City != null && forBuy.Street != null && forBuy.House != null && forBuy.FirstName != null && forBuy.LastName != null && forBuy.PhoneNumber != null)
             {
-                var customer = await UserManager.FindByNameAsync(User.Identity.Name);
-
-                var fileData = new byte[ForBuy.FileData.Length];
-
-                using (var stream = new MemoryStream())
-                {
-                    await ForBuy.FileData.CopyToAsync(stream);
-
-                    fileData = stream.ToArray();
-                }
-
-                var files = CustomerContext.Goods.ToList();
-
-                CustomerContext.Goods.Add(new Good
+                CustomerContext.ForBuys.Add(new ForBuy
                 {
                     CustomerId = customer.Id.ToString(),
                     Description = ForBuy.Description,
@@ -46,7 +33,7 @@ namespace MishaShop.Controllers
 
                 await CustomerContext.SaveChangesAsync();
 
-                return RedirectToAction("Index", "HomePage");
+                return RedirectToAction("Catalog", "CatalogPage");
             }
             else
             {
