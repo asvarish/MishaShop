@@ -8,6 +8,7 @@ namespace MishaShop.Models
     {
         public DbSet<Good> Goods { get; set; }
         public DbSet<FavouriteGoods> Favourite { get; set; }
+        public DbSet<ForBuy> ForBuys { get; set; }
 
         public CustomerContext()      
         {
