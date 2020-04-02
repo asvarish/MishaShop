@@ -34,6 +34,7 @@
                                 <p class="card-text">@good.User.UserName</p>
                                 <p class="card-text">номер продавца:@good.User.PhoneNumber</p>
                                 <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("DeleteFromFavourite", "Favourite", new {id = @good.id.ToString()})'">Удалить из избранного</button>
+                                <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("BuyPage", "Buy", new { id = good.GoodId})'">Купить</button>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <small class="text-muted">Цена @good.good.Price р </small>
                                 </div>

@@ -372,3 +372,6 @@ C:\Users\asvar\OneDrive\Документы\GitHub\MishaShop\MishaShop\MishaShop\
 C:\Users\asvar\OneDrive\Документы\GitHub\MishaShop\MishaShop\MishaShop\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\asvar\OneDrive\Документы\GitHub\MishaShop\MishaShop\MishaShop\obj\Debug\netcoreapp3.1\MishaShop.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\asvar\OneDrive\Документы\GitHub\MishaShop\MishaShop\MishaShop\bin\Debug\netcoreapp3.1\libman.json
+C:\Users\asvar\OneDrive\Документы\GitHub\MishaShop\MishaShop\MishaShop\obj\Debug\netcoreapp3.1\Razor\Views\Buy\BuyPage.cshtml.g.cs
+C:\Users\asvar\OneDrive\Документы\GitHub\MishaShop\MishaShop\MishaShop\obj\Debug\netcoreapp3.1\Razor\Views\Buy\MyOrdersPage.cshtml.g.cs
+C:\Users\asvar\OneDrive\Документы\GitHub\MishaShop\MishaShop\MishaShop\obj\Debug\netcoreapp3.1\Razor\Views\Orders\My.cshtml.g.cs
